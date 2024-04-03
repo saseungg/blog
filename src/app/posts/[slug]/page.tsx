@@ -1,5 +1,7 @@
-import MarkdownViewer from '@/components/MarkdownViewer';
+import AdjacentPostCard from '@/components/AdjacentPostCard';
+import PostContent from '@/components/PostContent';
 import { getPostData } from '@/service/posts';
+import { Metadata } from 'next';
 
 type Props = {
   params: {
@@ -7,18 +9,24 @@ type Props = {
   };
 };
 
+export async function generateMetaData({ params: { slug } }: Props): Promise<Metadata> {
+  const { title, description } = await getPostData(slug);
+  return {
+    title,
+    description,
+  };
+}
+
 export default async function Post({ params: { slug } }: Props) {
-  const { title, description, date, path, content } = await getPostData(slug);
+  const post = await getPostData(slug);
+  const { next, prev } = post;
 
   return (
     <article>
-      <section>
-        <div>
-          <h1 className='text-4xl font-bold'>{title}</h1>
-          <p>{date.toString()}</p>
-          <p>{description}</p>
-        </div>
-        <MarkdownViewer content={content} />
+      <PostContent post={post} />
+      <section className="text-tx flex items-stretch justify-between gap-1 text-sm mt-16 border-t pt-7 border-[#e8e8e8]">
+        {prev && <AdjacentPostCard post={prev} type="prev" />}
+        {next && <AdjacentPostCard post={next} type="next" />}
       </section>
     </article>
   );
