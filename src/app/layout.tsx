@@ -1,8 +1,10 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Newsreader, Inter } from 'next/font/google';
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
+
+const newreader = Newsreader({ subsets: ['latin'], variable: '--newsreader' });
 
 export const metadata: Metadata = {
   title: {
@@ -15,13 +17,17 @@ export const metadata: Metadata = {
   },
 };
 
+export const cls = (...classnames: string[]) => {
+  return classnames.join(' ');
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={inter.className}>
+    <html lang="en" className={cls(inter.className, newreader.variable)}>
       <body className="flex flex-col w-full max-w-[640px] mx-auto h-auto py-24">
         <main className="grow">{children}</main>
       </body>
