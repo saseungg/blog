@@ -8,12 +8,18 @@ type Props = {
 };
 
 export default async function Post({ params: { slug } }: Props) {
-  const post = await getPostData(slug);
+  const { title, description, date, path, content } = await getPostData(slug);
 
   return (
-    <>
-      <h1>{post.title}</h1>
-      <MarkdownViewer content={post.content} />
-    </>
+    <article>
+      <section>
+        <div>
+          <h1 className='text-4xl font-bold'>{title}</h1>
+          <p>{date.toString()}</p>
+          <p>{description}</p>
+        </div>
+        <MarkdownViewer content={content} />
+      </section>
+    </article>
   );
 }
