@@ -1,6 +1,6 @@
 export default function Profile() {
   return (
-    <div className="flex w-full flex-col gap-2">
+    <div className="flex w-full flex-col gap-2 border-b pb-9 border-gray-400">
       {/* Title */}
       <h1 className="text-xl font-bold">사승연의 블로그</h1>
       {/* Link */}

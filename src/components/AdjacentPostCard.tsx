@@ -11,7 +11,7 @@ export default function AdjacentPostCard({ post: { path, title }, type }: Props)
 
   return (
     <Link href={`/posts/${path}`}>
-      <p className="text-sm text-[#909090] mb-1">{postType}</p>
+      <p className="text-sm text-gray-800 mb-1">{postType}</p>
       <p className="text-sm">{title}</p>
     </Link>
   );

@@ -9,9 +9,11 @@ export default function PostPreviewItem({ post: { title, description, date, path
   return (
     <Link href={`posts/${path}`}>
       <article className="py-4">
-        <h2 className="text-lg font-medium">{title}</h2>
+        <div className="flex items-center justify-between">
+          <h2 className="text-lg font-medium">{title}</h2>
+          <p className="text-xs text-gray-800">{date.toString()}</p>
+        </div>
         <p className="text-sm">{description}</p>
-        <p className="text-xs text-gray-400">{date.toString()}</p>
       </article>
     </Link>
   );
