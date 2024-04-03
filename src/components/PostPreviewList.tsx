@@ -1,15 +1,15 @@
 import { getAllPosts } from '@/service/posts';
-import PostItem from './PostItem';
+import PostPreviewItem from './PostPreviewItem';
 
-export default async function PostList() {
+export default async function PostPreviewList() {
   const posts = await getAllPosts();
 
   return (
-    <div className="bg-slate-100">
+    <div>
       <ul>
         {posts.map((post) => (
           <li key={post.path}>
-            <PostItem post={post} />
+            <PostPreviewItem post={post} />
           </li>
         ))}
       </ul>
