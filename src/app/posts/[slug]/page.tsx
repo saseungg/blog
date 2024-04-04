@@ -1,7 +1,8 @@
-import AdjacentPostCard from '@/components/AdjacentPostCard';
+import AdjacentPostCard from '@/components/PostNavigator';
 import PostContent from '@/components/PostContent';
 import { getPostData } from '@/service/posts';
 import { Metadata } from 'next';
+import PostNavigator from '@/components/\bPostNavigator';
 
 type Props = {
   params: {
@@ -19,15 +20,12 @@ export async function generateMetaData({ params: { slug } }: Props): Promise<Met
 
 export default async function Post({ params: { slug } }: Props) {
   const post = await getPostData(slug);
-  const { next, prev } = post;
+
 
   return (
     <article>
       <PostContent post={post} />
-      <section className="text-tx flex items-stretch justify-between gap-1 text-sm mt-16 border-t pt-7 border-custom-border">
-        {prev && <AdjacentPostCard post={prev} type="prev" />}
-        {next && <AdjacentPostCard post={next} type="next" />}
-      </section>
+      <PostNavigator post={post} />
     </article>
   );
 }
