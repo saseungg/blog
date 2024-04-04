@@ -13,7 +13,7 @@ export default function PostContent({ post }: { post: PostData }) {
         <p className="text-[18px] font-newsreader">home</p>
       </Link>
       {/* 타이틀, 설명, 날짜 */}
-      <div className="mb-12 flex flex-col gap-2">
+      <div className="mb-12 flex flex-col gap-2 font-gowun">
         <h1 className="text-xl font-bold">{title}</h1>
         <p className="text-[15px] text-gray-1000">{description}</p>
 
@@ -25,7 +25,7 @@ export default function PostContent({ post }: { post: PostData }) {
             사승연
           </a>
           <p className="text-sm text-gray-1000">·</p>
-          <p className="text-sm text-gray-1000">{date.toString()}</p>
+          <p className="text-sm text-gray-1000 font-newsreader">{date.toString()}</p>
         </div>
       </div>
       {/* Content 영역 */}

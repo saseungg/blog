@@ -22,6 +22,7 @@ const config: Config = {
       },
       fontFamily: {
         newsreader: ['var(--newsreader)'],
+        gowun: ['var(--gowun)'],
       },
       typography: {
         DEFAULT: {
@@ -56,7 +57,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [require('@tailwindcss/typography')],
 };
 
 export default config;

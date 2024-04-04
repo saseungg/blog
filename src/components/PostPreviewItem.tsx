@@ -10,10 +10,10 @@ export default function PostPreviewItem({ post: { title, description, date, path
     <Link href={`posts/${path}`}>
       <article className="py-4">
         <div className="flex items-center justify-between">
-          <h2 className="text-lg font-medium">{title}</h2>
-          <p className="text-xs text-gray-800">{date.toString()}</p>
+          <h2 className="text-base font-medium font-gowun">{title}</h2>
+          <p className="text-sm font-gowun">{description}</p>
+          <p className="text-xs text-gray-800 font-newsreader">{date.toString()}</p>
         </div>
-        <p className="text-sm">{description}</p>
       </article>
     </Link>
   );

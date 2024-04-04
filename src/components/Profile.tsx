@@ -2,13 +2,13 @@ export default function Profile() {
   return (
     <div className="flex w-full flex-col gap-2 border-b pb-9 border-gray-400">
       {/* Title */}
-      <h1 className="text-xl font-bold">사승연의 블로그</h1>
+      <h1 className="text-2xl font-bold font-newsreader">saseungg</h1>
       {/* Link */}
       <div className="flex gap-2">
-        <a className="text-xs" href="https://github.com/saseungg">
+        <a className="text-xs font-newsreader" href="https://github.com/saseungg">
           Github
         </a>
-        <a className="text-xs" href="mailto:yeon14766@gmail.com">
+        <a className="text-xs font-newsreader" href="mailto:yeon14766@gmail.com">
           Email
         </a>
       </div>

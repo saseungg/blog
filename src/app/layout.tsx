@@ -1,10 +1,16 @@
 import type { Metadata } from 'next';
-import { Newsreader, Inter } from 'next/font/google';
+import { Newsreader, Inter, Gowun_Batang } from 'next/font/google';
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
 
 const newreader = Newsreader({ subsets: ['latin'], variable: '--newsreader' });
+
+const gowun = Gowun_Batang({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: '--gowun',
+});
 
 export const metadata: Metadata = {
   title: {
@@ -27,7 +33,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cls(inter.className, newreader.variable)}>
+    <html
+      lang="en"
+      className={cls(inter.className, newreader.variable, gowun.variable)}
+    >
       <body className="flex flex-col w-full max-w-[640px] mx-auto h-auto py-24">
         <main className="grow">{children}</main>
       </body>
