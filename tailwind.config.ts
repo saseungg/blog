@@ -5,58 +5,48 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        gray: {
-          50: '#fcfcfc',
-          100: '#f8f8f8',
-          200: '#f3f3f3',
-          300: '#ededed',
-          400: '#e8e8e8',
-          500: '#e2e2e2',
-          600: '#dbdbdb',
-          700: '#c7c7c7',
-          800: '#8f8f8f',
-          900: '#858585',
-          1000: '#6f6f6f',
-          1200: '#171717',
+        custom: {
+          bg: 'var(--bg)',
+          textDefault: 'var(--text-default)',
+          textHead: 'var(--text-head)',
+          textDesc1: 'var(--text-desc-1)',
+          textDesc2: 'var(--text-desc-2)',
+          border: 'var(--border)',
         },
+      },
+      keyframes: {
+        slideEnter: {
+          '0%': {
+            transform: 'translateY(10px)',
+            opacity: '0%',
+          },
+          '100%': {
+            transform: 'translateY(0)',
+            opacity: '100%',
+          },
+        },
+      },
+      animation: {
+        'slide-enter': 'slideEnter 1s both 1',
       },
       fontFamily: {
         newsreader: ['var(--newsreader)'],
         gowun: ['var(--gowun)'],
       },
-      typography: {
-        DEFAULT: {
-          css: {
-            color: '#3A3A3A',
-            h2: {
-              color: '#3A3A3A',
-              fontSize: '21px',
-              fontWeight: '600',
-            },
-            h3: {
-              color: '#3A3A3A',
-              fontSize: '18px',
-            },
-            'blockquote p': {
-              color: '#3A3A3A',
-              fontWeight: '400',
-              fontStyle: 'normal',
-              lineHeight: '1.6em',
-              padding: '.5em .5em',
-              opacity: 0.5,
-            },
-            a: {
-              color: '#3A3A3A',
-              fontWeight: '400',
-              textDecorationColor: '#c7c7c7',
-              textUnderlineOffset: '2.5px',
-              textDecorationThickness: '1px',
-            },
-          },
-        },
-      },
     },
   },
+  plugins: [require('@tailwindcss/typography')],
 };
 
 export default config;
+
+/* 
+
+   typography: {
+        DEFAULT: {
+          css: {
+            color: '#333',
+          },
+        },
+      },
+*/
