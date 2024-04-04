@@ -1,8 +1,14 @@
+import '../styles/globals.css';
+import '../styles/markdown.css';
 import type { Metadata } from 'next';
-import { Newsreader, Inter, Gowun_Batang } from 'next/font/google';
-import './globals.css';
+import { Newsreader, Gowun_Batang } from 'next/font/google';
+import localFont from 'next/font/local';
 
-const inter = Inter({ subsets: ['latin'] });
+const pretendard = localFont({
+  src: './fonts/PretendardVariable.woff2',
+  display: 'swap',
+  weight: '45 920',
+});
 
 const newreader = Newsreader({ subsets: ['latin'], variable: '--newsreader' });
 
@@ -33,10 +39,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={cls(inter.className, newreader.variable, gowun.variable)}
-    >
+    <html lang="en" className={cls(pretendard.className, newreader.variable, gowun.variable)}>
       <body className="flex flex-col w-full max-w-[640px] mx-auto h-auto py-24">
         <main className="grow">{children}</main>
       </body>
