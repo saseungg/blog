@@ -15,6 +15,9 @@
 html {
   background-color: var(--bg);
   color: var(--text-default);
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+  -webkit-tap-highlight-color: transparent;
 }
 
 pre > code {
@@ -33,4 +36,43 @@ pre {
 /* Fenced Code block - line style */
 pre span[data-line] {
   @apply inline-block px-4 py-0.5 leading-snug;
+}
+
+/* ---- scrollbar ---- */
+* {
+  --scrollbar-size: 16px;
+  --scrollbar-size-min: 44px;
+  --scrollbar-color: var(--border-fill);
+  scrollbar-color: var(--border-fill) transparent;
+  /* firefox */
+  scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+  width: 16px;
+  height: 16px;
+}
+
+::-webkit-scrollbar-thumb {
+  min-width: 44px;
+  min-height: 44px;
+  border: 5px solid transparent;
+  border-radius: 16px;
+  background-clip: padding-box;
+  background-color: var(--border-fill);
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-button,
+::-webkit-scrollbar-corner,
+::-webkit-resizer {
+  display: none;
+}
+
+/* drag */
+::selection {
+  background-color: var(--border-fill);
 }
