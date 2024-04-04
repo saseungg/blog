@@ -1,6 +1,6 @@
 import MarkdownViewer from '@/components/MarkdownViewer';
 import { PostData } from '@/service/posts';
-import { RiArrowLeftUpLine } from 'react-icons/ri';
+import { GoArrowUpLeft } from 'react-icons/go';
 import Link from 'next/link';
 
 export default function PostContent({ post }: { post: PostData }) {
@@ -9,7 +9,7 @@ export default function PostContent({ post }: { post: PostData }) {
     <section>
       {/* 상단 영역 */}
       <Link className="flex items-center gap-1 mb-6 w-fit hover:opacity-50" href="/">
-        <RiArrowLeftUpLine />
+        <GoArrowUpLeft />
         <p className="text-[17px] font-newsreader ">home</p>
       </Link>
       {/* 타이틀, 설명, 날짜 */}
