@@ -24,7 +24,7 @@ export default async function Post({ params: { slug } }: Props) {
   return (
     <article>
       <PostContent post={post} />
-      <section className="text-tx flex items-stretch justify-between gap-1 text-sm mt-16 border-t pt-7 border-gray-400">
+      <section className="text-tx flex items-stretch justify-between gap-1 text-sm mt-16 border-t pt-7 border-custom-border">
         {prev && <AdjacentPostCard post={prev} type="prev" />}
         {next && <AdjacentPostCard post={next} type="next" />}
       </section>

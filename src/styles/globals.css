@@ -15,3 +15,21 @@ html {
   background-color: var(--bg);
   color: var(--text-default);
 }
+
+pre > code {
+  display: grid;
+}
+ 
+/* Fenced Code block - hide horizontal scrollbar: webkit */
+pre::-webkit-scrollbar {
+  display: none;
+}
+/* Fenced Code block - hide horizontal scrollbar: mozila */
+pre {
+  scrollbar-width: none;
+}
+ 
+/* Fenced Code block - line style */
+pre span[data-line] {
+  @apply inline-block px-4 py-0.5 leading-snug;
+}

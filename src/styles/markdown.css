@@ -1,0 +1,81 @@
+.prose > :where(h1, h2, h3, h4) {
+  color: var(--text-head);
+  font-weight: 600;
+}
+
+.prose > h2 {
+  font-size: 17px;
+}
+
+.prose > :where(h3, h4) {
+  font-size: 1rem;
+}
+
+.prose > p {
+  color: var(--text-default);
+  font-size: 15.5px;
+}
+
+.prose strong {
+  color: var(--text-head);
+  font-weight: 500;
+}
+
+.prose a {
+  font-family: 'Gowun Batang';
+  text-decoration: none;
+  color: var(--text-head);
+  position: relative;
+}
+
+.prose a:hover::before {
+  bottom: 0;
+  height: 100%;
+}
+
+.prose a::before {
+  content: '';
+  background-color: var(--border);
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  width: 100%;
+  height: 1px;
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+}
+
+/* blockquote */
+
+.prose blockquote {
+  line-height: 1.6em;
+  padding: 0.5em 1em;
+  margin-left: -1.1em;
+}
+
+.prose blockquote > p {
+  font-size: 15.5px;
+  font-weight: normal;
+  font-style: normal;
+  opacity: 0.6;
+}
+
+.prose blockquote > :first-child {
+  margin-top: 0;
+}
+
+.prose blockquote > :last-child {
+  margin-bottom: 0;
+}
+
+.prose blockquote p:first-of-type::before {
+  content: none;
+}
+
+.prose blockquote p:first-of-type::after {
+  content: none;
+}
+
+.prose :where(pre):not(:where([class~='not-prose'], [class~='not-prose'] *)) {
+  background-color: #fafafa;
+}

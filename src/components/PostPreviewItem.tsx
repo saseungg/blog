@@ -8,12 +8,12 @@ type Props = {
 export default function PostPreviewItem({ post: { title, description, date, path } }: Props) {
   return (
     <Link href={`posts/${path}`}>
-      <article className="py-4">
-        <div className="flex items-center justify-between">
-          <h2 className="text-base font-medium font-gowun">{title}</h2>
-          <p className="text-sm font-gowun">{description}</p>
-          <p className="text-xs text-gray-800 font-newsreader">{date.toString()}</p>
+      <article className="py-4 flex justify-between items-center">
+        <div className="flex flex-col justify-between font-gowun gap-[3px]">
+          <h2 className="text-base">{title}</h2>
+          <p className="text-[13px] text-custom-textDesc2">{description}</p>
         </div>
+        <p className="text-xs font-newsreader text-custom-textDesc1">{date.toString()}</p>
       </article>
     </Link>
   );

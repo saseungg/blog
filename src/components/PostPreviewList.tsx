@@ -8,7 +8,7 @@ export default async function PostPreviewList() {
     <div>
       <ul>
         {posts.map((post) => (
-          <li key={post.path}>
+          <li key={post.path} className='animate-slide-enter'>
             <PostPreviewItem post={post} />
           </li>
         ))}

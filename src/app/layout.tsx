@@ -40,7 +40,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={cls(pretendard.className, newreader.variable, gowun.variable)}>
-      <body className="flex flex-col w-full max-w-[640px] mx-auto h-auto py-24">
+      <body className="flex flex-col w-full max-w-[650px] mx-auto h-auto py-24">
         <main className="grow">{children}</main>
       </body>
     </html>

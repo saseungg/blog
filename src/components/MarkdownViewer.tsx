@@ -2,20 +2,26 @@
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { atomDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
-
+import { gruvboxLight } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import Image from 'next/image';
 
 export default function MarkdownViewer({ content }: { content: string }) {
   return (
     <ReactMarkdown
-      className="prose animate-slide-enter max-w-[640px]"
+      className="prose animate-slide-enter max-w-[650px]"
       remarkPlugins={[remarkGfm]}
       components={{
         code({ node, ref, className, children, ...props }) {
           const match = /language-(\w+)/.exec(className || '');
           return match ? (
-            <SyntaxHighlighter language={match[1]} PreTag="div" {...props} style={atomDark}>
+            <SyntaxHighlighter
+              language={match[1]}
+              PreTag="div"
+              {...props}
+              style={gruvboxLight}
+              customStyle={{ backgroundColor: 'transparent', padding: 0, fontSize: '13.5px' }}
+              wrapLongLines={true}
+            >
               {String(children).replace(/\n$/, '')}
             </SyntaxHighlighter>
           ) : (
@@ -31,13 +37,6 @@ export default function MarkdownViewer({ content }: { content: string }) {
             height={350}
           />
         ),
-        pre({ node, children, style, ...props }) {
-          return (
-            <pre {...props} style={{ ...style }}>
-              {children}
-            </pre>
-          );
-        },
       }}
     >
       {content}

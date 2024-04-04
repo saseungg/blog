@@ -1,6 +1,6 @@
 export default function Profile() {
   return (
-    <div className="flex w-full flex-col gap-2 border-b pb-9 border-gray-400">
+    <div className="flex w-full flex-col gap-2 border-b pb-9 border-custom-border">
       {/* Title */}
       <h1 className="text-2xl font-bold font-newsreader">saseungg</h1>
       {/* Link */}
