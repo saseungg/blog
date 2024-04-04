@@ -9,6 +9,7 @@
   --text-desc-1: #8f8f8f;
   --text-desc-2: #6f6f6f;
   --border: #e8e8e8;
+  --border-fill: #ececec;
 }
 
 html {
@@ -19,7 +20,7 @@ html {
 pre > code {
   display: grid;
 }
- 
+
 /* Fenced Code block - hide horizontal scrollbar: webkit */
 pre::-webkit-scrollbar {
   display: none;
@@ -28,7 +29,7 @@ pre::-webkit-scrollbar {
 pre {
   scrollbar-width: none;
 }
- 
+
 /* Fenced Code block - line style */
 pre span[data-line] {
   @apply inline-block px-4 py-0.5 leading-snug;

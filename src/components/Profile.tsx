@@ -5,10 +5,10 @@ export default function Profile() {
       <h1 className="text-2xl font-bold font-newsreader">saseungg</h1>
       {/* Link */}
       <div className="flex gap-2">
-        <a className="text-xs font-newsreader" href="https://github.com/saseungg">
+        <a className="text-xs font-newsreader hover:opacity-50" href="https://github.com/saseungg">
           Github
         </a>
-        <a className="text-xs font-newsreader" href="mailto:yeon14766@gmail.com">
+        <a className="text-xs font-newsreader hover:opacity-50" href="mailto:yeon14766@gmail.com">
           Email
         </a>
       </div>

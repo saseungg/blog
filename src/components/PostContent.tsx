@@ -8,9 +8,9 @@ export default function PostContent({ post }: { post: PostData }) {
   return (
     <section>
       {/* 상단 영역 */}
-      <Link className="flex items-center gap-1 mb-6" href="/">
+      <Link className="flex items-center gap-1 mb-6 w-fit hover:opacity-50" href="/">
         <RiArrowLeftUpLine />
-        <p className="text-[18px] font-newsreader">home</p>
+        <p className="text-[17px] font-newsreader ">home</p>
       </Link>
       {/* 타이틀, 설명, 날짜 */}
       <div className="mb-12 flex flex-col gap-2 font-gowun">
@@ -19,13 +19,13 @@ export default function PostContent({ post }: { post: PostData }) {
 
         <div className="flex gap-2">
           <a
-            className="text-sm font-medium border-b border-gray-700"
+            className="text-sm font-medium border-b border-custom-border hover:opacity-50"
             href="https://github.com/saseungg"
           >
             사승연
           </a>
           <p className="text-sm text-gray-1000">·</p>
-          <p className="text-sm text-gray-1000 font-newsreader">{date.toString()}</p>
+          <p className="text-sm text-gray-1000">{date.toString()}</p>
         </div>
       </div>
       {/* Content 영역 */}
