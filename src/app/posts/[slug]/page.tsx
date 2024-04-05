@@ -1,4 +1,3 @@
-import AdjacentPostCard from '@/components/PostNavigator';
 import PostContent from '@/components/PostContent';
 import { getPostData } from '@/service/posts';
 import { Metadata } from 'next';
@@ -20,7 +19,6 @@ export async function generateMetaData({ params: { slug } }: Props): Promise<Met
 
 export default async function Post({ params: { slug } }: Props) {
   const post = await getPostData(slug);
-
 
   return (
     <article>

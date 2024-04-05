@@ -12,6 +12,8 @@ const config: Config = {
           textDesc1: 'var(--text-desc-1)',
           textDesc2: 'var(--text-desc-2)',
           border: 'var(--border)',
+          blockFill1: 'var(--block-fill-1)',
+          blockFill2: 'var(--block-fill-2)',
         },
       },
       keyframes: {
@@ -30,6 +32,7 @@ const config: Config = {
         'slide-enter': 'slideEnter 1s both 1',
       },
       fontFamily: {
+        pretendard: ['var(--pretendard)'],
         newsreader: ['var(--newsreader)'],
         gowun: ['var(--gowun)'],
       },
@@ -39,14 +42,3 @@ const config: Config = {
 };
 
 export default config;
-
-/* 
-
-   typography: {
-        DEFAULT: {
-          css: {
-            color: '#333',
-          },
-        },
-      },
-*/
