@@ -1,7 +1,7 @@
 import PostContent from '@/components/PostContent';
 import { getPostData } from '@/service/posts';
 import { Metadata } from 'next';
-import PostNavigator from '@/components/\bPostNavigator';
+import PostNavigator from '@/components/PostNavigator';
 
 type Props = {
   params: {
