@@ -21,6 +21,14 @@
   --font-gowun: 'Gowun Batang';
 }
 
+@layer base {
+  :root {
+    --page-top: 96px;
+    --body-margin-left: max(24px, env(safe-area-inset-left));
+    --body-margin-right: max(24px, env(safe-area-inset-right));
+  }
+}
+
 html {
   background-color: var(--bg);
   color: var(--text-default);
@@ -84,4 +92,30 @@ pre span[data-line] {
 /* drag */
 ::selection {
   background-color: var(--border-fill);
+}
+
+/* blur */
+@layer components {
+  .blur-layer {
+    --h: min(96px, var(--page-top));
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    width: calc(100% + var(--body-margin-left) + var(--body-margin-right));
+    height: var(--h);
+    margin-bottom: calc(-1 * var(--h));
+    margin-left: calc(-1 * var(--body-margin-left));
+    backdrop-filter: blur(5px);
+    mask-image: linear-gradient(to bottom, #000000 25%, transparent);
+    opacity: 0.95;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .blur-layer:after {
+    position: absolute;
+    background: linear-gradient(to bottom, var(--bg), transparent);
+    content: '';
+    inset: 0;
+  }
 }

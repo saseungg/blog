@@ -40,8 +40,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={cls(pretendard.variable, newsreader.variable, gowun.variable)}>
-      <body className="flex flex-col w-full max-w-[650px] mx-auto h-auto py-24 font-pretendard">
-        <main>{children}</main>
+      <body>
+        <div className="blur-layer"></div>
+        <main className="w-full max-w-[650px] py-24 font-pretendard mx-auto">{children}</main>
       </body>
     </html>
   );
