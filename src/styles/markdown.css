@@ -1,6 +1,15 @@
+/* font */
+
+.prose > * {
+  color: var(--text-default);
+}
+
 .prose > :where(h1, h2, h3, h4) {
-  color: var(--text-head);
   font-weight: 600;
+}
+
+.prose strong {
+  font-weight: 500;
 }
 
 .prose > h2 {
@@ -12,19 +21,14 @@
 }
 
 .prose > p {
-  color: var(--text-default);
   font-size: 15.5px;
 }
 
-.prose strong {
-  color: var(--text-head);
-  font-weight: 500;
-}
+/* a */
 
 .prose a {
-  font-family: 'Gowun Batang';
+  color: var(--text-default);
   text-decoration: none;
-  color: var(--text-head);
   position: relative;
 }
 
@@ -35,7 +39,7 @@
 
 .prose a::before {
   content: '';
-  background-color: var(--border-fill);
+  background-color: var(--block-fill-1);
   position: absolute;
   left: 0;
   bottom: 0px;
