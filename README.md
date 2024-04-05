@@ -22,7 +22,7 @@ my personal blog project
 - [x] hover, scroll, animation 처리
 - [x] post에서 home으로 이동하는 링크 컴포넌트 구현
 - [x] 1차 구현 완료
-- [ ] 빌드 후 도메인 붙이기
+- [x] 빌드 후 도메인 붙이기
 - [ ] 이미지 스타일링
 - [ ] 날짜 형식 변경
 - [ ] md 파일에서 title, date, path 추출하는 형식으로 변경
