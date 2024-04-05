@@ -77,5 +77,20 @@
 }
 
 .prose :where(pre):not(:where([class~='not-prose'], [class~='not-prose'] *)) {
-  background-color: #fafafa;
+  background-color: var(--block-fill-2);
+}
+
+/* code */
+.prose code:not(pre code) {
+  color: var(--text-head);
+  background: var(--block-fill-1);
+  border-radius: 6px;
+  font: var(--type-code);
+  font-size: 13px;
+  padding: 4px;
+}
+
+.prose code::before,
+.prose code::after {
+  content: none;
 }
