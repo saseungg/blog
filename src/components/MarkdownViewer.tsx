@@ -19,7 +19,12 @@ export default function MarkdownViewer({ content }: { content: string }) {
               PreTag="div"
               {...props}
               style={gruvboxLight}
-              customStyle={{ backgroundColor: 'transparent', padding: 0, fontSize: '13.5px' }}
+              customStyle={{
+                backgroundColor: 'transparent',
+                padding: 0,
+                fontSize: '13.5px',
+                overflow: 'none',
+              }}
               wrapLongLines={true}
             >
               {String(children).replace(/\n$/, '')}
