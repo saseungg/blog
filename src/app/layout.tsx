@@ -21,10 +21,9 @@ const gowun = Gowun_Batang({
 
 export const metadata: Metadata = {
   title: {
-    default: '승연의 블로그',
-    template: '승연의 블로그 | %s',
+    default: 'saseungg',
+    template: 'saseungg | %s',
   },
-  description: '기록하다',
   icons: {
     icon: '/favicon.ico',
   },

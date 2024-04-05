@@ -3,8 +3,8 @@ import PostPreviewList from '@/components/PostPreviewList';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'All Posts',
-  description: '블로그 입니다',
+  title: 'saseungg',
+  description: 'dev blog',
 };
 
 export default function Home() {
