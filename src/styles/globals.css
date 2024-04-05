@@ -2,7 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+/* variables */
+
 :root {
+  /* color */
   --bg: #fff;
   --text-default: #3a3a3a;
   --text-head: #171717;
@@ -11,6 +14,11 @@
   --border: #e8e8e8;
   --block-fill-1: #ededed;
   --block-fill-2: #fafafa;
+
+  /* font */
+  --font-pretendard: 'Pretendard';
+  --font-newsreader: 'Newsreader';
+  --font-gowun: 'Gowun Batang';
 }
 
 html {
