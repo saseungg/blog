@@ -9,14 +9,6 @@ type Props = {
   };
 };
 
-export async function generateMetaData({ params: { slug } }: Props): Promise<Metadata> {
-  const { title, description } = await getPostData(slug);
-  return {
-    title,
-    description,
-  };
-}
-
 export default async function Post({ params: { slug } }: Props) {
   const post = await getPostData(slug);
 
