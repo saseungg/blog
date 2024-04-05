@@ -9,7 +9,8 @@
   --text-desc-1: #8f8f8f;
   --text-desc-2: #6f6f6f;
   --border: #e8e8e8;
-  --border-fill: #ececec;
+  --block-fill-1: #ededed;
+  --block-fill-2: #fafafa;
 }
 
 html {

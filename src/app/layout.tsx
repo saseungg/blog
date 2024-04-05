@@ -8,9 +8,10 @@ const pretendard = localFont({
   src: './fonts/PretendardVariable.woff2',
   display: 'swap',
   weight: '45 920',
+  variable: '--pretendard',
 });
 
-const newreader = Newsreader({ subsets: ['latin'], variable: '--newsreader' });
+const newsreader = Newsreader({ subsets: ['latin'], variable: '--newsreader' });
 
 const gowun = Gowun_Batang({
   subsets: ['latin'],
@@ -39,8 +40,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cls(pretendard.className, newreader.variable, gowun.variable)}>
-      <body className="flex flex-col w-full max-w-[650px] mx-auto h-auto py-24">
+    <html lang="en" className={cls(pretendard.variable, newsreader.variable, gowun.variable)}>
+      <body className="flex flex-col w-full max-w-[650px] mx-auto h-auto py-24 font-pretendard">
         <main>{children}</main>
       </body>
     </html>
