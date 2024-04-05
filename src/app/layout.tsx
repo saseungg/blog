@@ -11,7 +11,12 @@ const pretendard = localFont({
   variable: '--pretendard',
 });
 
-const newsreader = Newsreader({ subsets: ['latin'], variable: '--newsreader' });
+const newsreader = Newsreader({
+  subsets: ['latin'],
+  variable: '--newsreader',
+  display: 'swap',
+  adjustFontFallback: false,
+});
 
 const gowun = Gowun_Batang({
   subsets: ['latin'],
@@ -29,7 +34,7 @@ export const metadata: Metadata = {
   },
 };
 
-export const cls = (...classnames: string[]) => {
+const cls = (...classnames: string[]) => {
   return classnames.join(' ');
 };
 
