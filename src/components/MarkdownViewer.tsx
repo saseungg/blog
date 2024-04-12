@@ -8,7 +8,7 @@ import Image from 'next/image';
 export default function MarkdownViewer({ content }: { content: string }) {
   return (
     <ReactMarkdown
-      className="prose animate-slide-enter max-w-[650px]"
+      className="prose animate-slide-enter max-w-custom"
       remarkPlugins={[remarkGfm]}
       components={{
         code({ node, ref, className, children, ...props }) {

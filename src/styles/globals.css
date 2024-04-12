@@ -19,6 +19,9 @@
   --font-pretendard: 'Pretendard';
   --font-newsreader: 'Newsreader';
   --font-gowun: 'Gowun Batang';
+
+  /* layout */
+  --page-max-width: 700px;
 }
 
 @layer base {

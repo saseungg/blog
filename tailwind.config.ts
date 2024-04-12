@@ -16,6 +16,9 @@ const config: Config = {
           blockFill2: 'var(--block-fill-2)',
         },
       },
+      maxWidth: {
+        custom: 'var(--page-max-width)',
+      },
       keyframes: {
         slideEnter: {
           '0%': {

@@ -47,7 +47,7 @@ export default function RootLayout({
     <html lang="en" className={cls(pretendard.variable, newsreader.variable, gowun.variable)}>
       <body>
         <div className="blur-layer"></div>
-        <main className="w-full max-w-[650px] py-24 font-pretendard mx-auto">{children}</main>
+        <main className="w-full max-w-custom py-24 font-pretendard mx-auto">{children}</main>
       </body>
     </html>
   );
